@@ -10,7 +10,6 @@ guessed_letters = []
 lives = 6
 stage = 1
 word_length = 5
-
 image_width = 400
 image_height = 400
 
