@@ -95,14 +95,14 @@ def new_game():
 
 def set_difficulty():
     global word_length
-    word_length = simpledialog.askinteger("Difficulty", "Drag slider to pick difficulty", initialvalue=5, minvalue=3,
-                                          maxvalue=10)
+    word_length = simpledialog.askinteger("Difficulty", " pick difficulty (enter a num 3 to 15)", initialvalue=5, minvalue=3,
+                                          maxvalue=15)
     new_game()
 
 
 root = tk.Tk()
 root.title("Hangman Game")
-root.geometry("800x700") 
+root.geometry("800x700")
 
 # Button styles
 new_game_style = ttk.Style()
@@ -116,7 +116,7 @@ new_game_style.configure(
 guess_style = ttk.Style()
 guess_style.configure(
     "Guess.TButton",
-    background="blue",  
+    background="blue",
     foreground="white",
     font=("Arial", 16),
 )
@@ -127,16 +127,16 @@ new_game_button.pack(pady=10)
 set_difficulty_button = ttk.Button(root, text="Set Difficulty", command=set_difficulty, style="NewGame.TButton")
 set_difficulty_button.pack(pady=10)
 
-word_display = tk.Label(root, text="", font=("Helvetica", 32)) 
+word_display = tk.Label(root, text="", font=("Helvetica", 32))
 word_display.pack(pady=20)
 
-guessed_display = tk.Label(root, text="Guessed Letters:", font=("Helvetica", 24))  
+guessed_display = tk.Label(root, text="Guessed Letters:", font=("Helvetica", 24))
 guessed_display.pack()
 
-lives_display = tk.Label(root, text="", font=("Helvetica", 24))  
+lives_display = tk.Label(root, text="", font=("Helvetica", 24))
 lives_display.pack(pady=10)
 
-letter_entry = tk.Entry(root, font=("Helvetica", 20)) 
+letter_entry = tk.Entry(root, font=("Helvetica", 20))
 letter_entry.pack(pady=10)
 
 guess_button = ttk.Button(root, text="Guess", command=guess_letter, style="Guess.TButton")
@@ -145,6 +145,6 @@ guess_button.pack(pady=10)
 image_label = tk.Label(root)
 image_label.pack()
 
-new_game()  
+new_game()
 
 root.mainloop()
