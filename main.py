@@ -102,7 +102,7 @@ def set_difficulty():
 
 root = tk.Tk()
 root.title("Hangman Game")
-root.geometry("800x700")  # Enlarged the window
+root.geometry("800x700") 
 
 # Button styles
 new_game_style = ttk.Style()
@@ -116,43 +116,35 @@ new_game_style.configure(
 guess_style = ttk.Style()
 guess_style.configure(
     "Guess.TButton",
-    background="blue",  # Changed guess button color
+    background="blue",  
     foreground="white",
     font=("Arial", 16),
 )
 
-# New Game button
 new_game_button = ttk.Button(root, text="New Game", command=new_game, style="NewGame.TButton")
 new_game_button.pack(pady=10)
 
-# Set Difficulty button
 set_difficulty_button = ttk.Button(root, text="Set Difficulty", command=set_difficulty, style="NewGame.TButton")
 set_difficulty_button.pack(pady=10)
 
-# Word display
-word_display = tk.Label(root, text="", font=("Helvetica", 32))  # Increased font size
+word_display = tk.Label(root, text="", font=("Helvetica", 32)) 
 word_display.pack(pady=20)
 
-# Guessed Letters
-guessed_display = tk.Label(root, text="Guessed Letters:", font=("Helvetica", 24))  # Increased font size
+guessed_display = tk.Label(root, text="Guessed Letters:", font=("Helvetica", 24))  
 guessed_display.pack()
 
-# Lives
-lives_display = tk.Label(root, text="", font=("Helvetica", 24))  # Increased font size
+lives_display = tk.Label(root, text="", font=("Helvetica", 24))  
 lives_display.pack(pady=10)
 
-# Letter Entry
-letter_entry = tk.Entry(root, font=("Helvetica", 20))  # Increased font size
+letter_entry = tk.Entry(root, font=("Helvetica", 20)) 
 letter_entry.pack(pady=10)
 
-# Guess Button
 guess_button = ttk.Button(root, text="Guess", command=guess_letter, style="Guess.TButton")
 guess_button.pack(pady=10)
 
-# Image Label
 image_label = tk.Label(root)
 image_label.pack()
 
-new_game()  # Start a new game
+new_game()  
 
 root.mainloop()
