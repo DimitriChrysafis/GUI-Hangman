@@ -8,15 +8,6 @@ This Python Hangman game features a super dope GUI. Shows the progress of the du
 - Tkinter (typically included with Python)
 - PIL (Pillow)
 
-## How to Run
-
-1. Install PIL if not already installed:
-
-   ```
-   pip install pillow
-  ```
-2. Download 'words_alpha.txt' from dwyl/english-words repository and save it in the game's directory.
-
 ## Customization
 
 Modify the game by changing:
