@@ -10,18 +10,13 @@ This Python Hangman game features a super dope GUI. Shows the progress of the du
 
 ## How to Run
 
-1. Ensure Python is installed on your system.
-
-2. Install PIL if not already installed:
+1. Install PIL if not already installed:
 
    ```bash
    pip install pillow
   ```
-3. Download 'words_alpha.txt' from dwyl/english-words repository and save it in the game's directory.
+2. Download 'words_alpha.txt' from dwyl/english-words repository and save it in the game's directory.
 
-4. ```bash
-python hangman_gui.py
-```
 ## Customization
 
 Modify the game by changing:
